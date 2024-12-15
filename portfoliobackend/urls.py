@@ -28,5 +28,8 @@ def success_view(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/success/', success_view, name='success'),
+    path('api/', include([
+        path('success/', success_view, name='success'),
+        path('other/', other_view, name='other'),
+    ])),
 ]
