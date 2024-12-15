@@ -1,1 +1,1 @@
-web: PYTHONPATH=. gunicorn wsgi:application 
+web: gunicorn portfoliobackend.wsgi --log-file - 
